@@ -1,2 +1,2 @@
-# simple_shell
-programming simple shell project using C language
+# Simple_shell
+Programming simple shell project using C language
