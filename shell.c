@@ -1,12 +1,12 @@
 #include "shell.h"
 /**
  * shell - Infinite loop that runs shell
- * @ac: Arg count
- * @av: args passed to shell at beginning of prog
+ * @argc: Arg count
+ * @argv: array of arguments passed to shell at beginning of program
  * @env: Environment
  * Return: Void
  */
-void shell(int ac, char **av, char **env)
+void shell(int argc, char **argv, char **env)
 {
 	char *line;
 	char **args;
@@ -38,10 +38,10 @@ void shell(int ac, char **av, char **env)
 		free(line);
 		free(args);
 	} while (status);
-	if (!ac)
-		(void)ac;
-	if (!av)
-		(void)av;
+	if (!argc)
+		(void)argc;
+	if (!argv)
+		(void)argv;
 	if (!env)
 		(void)env;
 }
