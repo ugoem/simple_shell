@@ -26,8 +26,8 @@ void init_shell()
 	printf("\n\n\t-USE AT YOUR OWN RISK-");
 	printf("\n\n\n\n*******************"
 			"***********************");
-	char* uname = getenv("USER");
-	printf("\n\n\nUSER is: @%s", uname);
+	char* username = getenv("USER");
+	printf("\n\n\nUSER is: @%s", username);
 	printf("\n");
 	sleep(1);
 	clear();
@@ -155,7 +155,7 @@ void execArgsPiped(char** parsed, char** parsedpipe)
 void openHelp()
 {
 	puts("\n***WELCOME TO MY SHELL HELP***"
-			"\nCopyright @ Suprotik Dey"
+			"\nCopyright @ Ngozi & Ugochukwu ALX project"
 			"\n-Use the shell at your own risk..."
 			"\nList of Commands supported:"
 			"\n>cd"
@@ -217,6 +217,7 @@ int ownCmdHandler(char** parsed)
 int parsePipe(char* str, char** strpiped)
 {
 	int i;
+	
 	 for (i = 0; i < 2; i++)
 	 {
 		 strpiped[i] = strsep(&str, "|");
@@ -236,6 +237,7 @@ int parsePipe(char* str, char** strpiped)
 void parseSpace(char* str, char** parsed)
 {
 	int i;
+	
 	for (i = 0; i < MAXLIST; i++)
 	{
 		 parsed[i] = strsep(&str, " ");
